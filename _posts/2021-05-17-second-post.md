@@ -1,5 +1,5 @@
 ---
-title:  "github.io 블로그 시작하기"
+title:  "Dev and Blog1"
 excerpt: "GitHub Blog 서비스인 github.io 블로그 시작하기로 했다."
 
 
@@ -7,7 +7,7 @@ excerpt: "GitHub Blog 서비스인 github.io 블로그 시작하기로 했다."
 categories:
   - Development
 tags:
-  - Blog
+  - Blog1
 ---
 
 GitHub Blog 서비스인 github.io 블로그 시작하기로 했다.
