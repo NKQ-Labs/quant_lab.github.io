@@ -10,11 +10,11 @@ layout: archive
 
 <script>
 		var number_of_post={}
-		document.write("checker!!  123--1234566")
 </script>
 	
+	
+	
 {% for post  in site.categories.Development %}
-
 <script>
 var myVar= '{{post.tags|string}}'
 if (myVar in number_of_post== false )
@@ -28,6 +28,9 @@ else
 </script>
 {% endfor %}
 
+
+
+
 {% assign tags_max = 0 %}
 {% for tag in site.tags %}
   {% if tag[1].size > tags_max %}
@@ -35,62 +38,76 @@ else
   {% endif %}
 {% endfor %}
 
-
-
-
-
-	
 	
 
-<script>
-for (var key in number_of_post)
-{
- document.write(key ); 
-}     
-</script>
+
 
 <ul class="taxonomy__index">
+{% for tag in site.tags  %}
 
-{% for tag in site.tags %}
+{% for post in tag.last %}
+  {% assign checker = false %}
+  {% if post.categories contains "Development" %}
+    {% assign checker=true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if checker == false%}
+{% continue %}
+{% endif %}
+
 <script>
 var myVar= '{{tag[0]|string}}';
-
-document.write(myVar);
-document.write(myVar in number_of_post);
-document.write("asdf324");
-
-if ( (myVar in number_of_post) == false){
-document.write("ABCDEF");
-}
-else {
-
-document.document("not in if" );
-}
 </script>
 
 <li>
   <a href="#{{ tag[0] | slugify }}">
 	<strong><script> 
-	document.write(number_of_post ); 
-	</script>  	</strong> <span class="taxonomy__count">{{125}}</span>
+	
+	document.write(myVar ); 
+	</script>  	</strong>
+	<span class="taxonomy__count"><script> 
+	document.write(number_of_post[myVar] ); 
+	</script> </span>
   </a>
 </li>
+
 {% endfor %}
 </ul>
 
+
+
 {% assign entries_layout = page.entries_layout | default: 'list' %}
-{% for i in (1..tags_max) reversed %}
+
   {% for tag in site.tags %}
-    {% if tag[1].size == i %}
+
+	  
+  {% for post in tag.last %}
+	{% assign checker = false %}
+	{% if post.categories contains "Development" %}
+	 {% assign checker=true %}
+		{% break %}
+	{% endif %}
+  {% endfor %}
+  
+  {% if checker == false%}
+  {% continue %}
+  {% endif %}
+  
       <section id="{{ tag[0] | slugify | downcase }}" class="taxonomy__section">
         <h2 class="archive__subtitle">{{ tag[0] }}</h2>
         <div class="entries-{{ entries_layout }}">
           {% for post in tag.last %}
-            {% include archive-single.html type=entries_layout %}
-          {% endfor %}
+            {% unless   post.categories contains "Development" %}
+			{% continue %}
+			{% endunless  %}
+			{% include archive-single.html type=entries_layout %}
+          
+		  {% endfor %}
         </div>
         <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
       </section>
-    {% endif %}
+
   {% endfor %}
-{% endfor %}
+
