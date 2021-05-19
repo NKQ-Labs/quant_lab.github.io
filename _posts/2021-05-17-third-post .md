@@ -1,15 +1,14 @@
 ---
-title:  "tag 이것 저것 다루어 보기"
-excerpt: "GitHub Blog 서비스인 github.io 블로그 시작하기로 했다."
-
+title:  "Blog1 and data"
+excerpt: "간단해 보이지만 어렵군."
 
 
 categories:
   - Data-Analysis
 tags:
-  - [Blog]
----
+  - Blog1
 
+---
 GitHub Blog 서비스인 github.io 블로그 시작하기로 했다.
 GitHub Blog 서비스의 이름은 Pages이다.
 
