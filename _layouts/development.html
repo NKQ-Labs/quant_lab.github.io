@@ -2,12 +2,44 @@
 layout: archive
 ---
 
+
 {{ content }}
 
+
+
+<script>
+		var number_of_post={}
+        document.write("starting of the script, dictionary defined? \n"); // script 태그 안에 작성한 코드가 실행된다.
+		document.write("<br>");		
+</script>
+	
+	
+	
+{% for post  in site.categories.Development %}
+<script>
+var myVar= '{{post.tags|string}}'
+document.write("what is the type: ",  typeof myVar)
+document.write("<br><br>");	
+//console.log(number_of_post)
+number_of_post[myVar] = 1
+document.write("in the script! : " );
+document.write(number_of_post);
+document.write( JSON.stringify(number_of_post))
+document.write("<br><br>");		
+</script>
+{{post.tags|escape}}
+{% endfor %}
+
+
+	
+	
 {% assign tags_max = 0 %}
 {% for tag in site.tags %}
   {% if tag[1].size > tags_max %}
     {% assign tags_max = tag[1].size %}
+	<script>
+	document.write(myVar);
+	</script>
   {% endif %}
 {% endfor %}
 
