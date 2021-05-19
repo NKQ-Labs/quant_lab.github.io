@@ -3,7 +3,7 @@ title: "About the Rocket Fund"
 permalink: /about/
 layout: single
 header:
-  overlay_image: /assets/Images/main-teaser.jpg
+  overlay_image: /assets/image/cosmetic.jpg
   overlay_filter: 0.5
 author_profile: true
 ---

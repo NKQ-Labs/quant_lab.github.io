@@ -188,7 +188,11 @@ lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+    
 # Markdown Processing
 kramdown:
   input: GFM
