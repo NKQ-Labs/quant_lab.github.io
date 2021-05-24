@@ -16,11 +16,13 @@ last_modified_at: 2021-05-21
 categories:
   - Development
 tags:
-  - [Server, MSSQL]
+  - [data-collection]
 ---
 
-# 데이터 수집 방법
-ㅁㄴㅇㄻㄴㅇㄹ
+# 데이터 수집 
+어떤식으로 자동화된 프로그램 전략을 짤까를 고민하다가 우선 제일 간단하게 시작하기로 했다.
+
+우선 데이터를 
 
 ## Heading2
 ### Heading3

@@ -7,12 +7,12 @@ layout: archive
 
 
 
-
 <script>
 		var number_of_post={}
 </script>
 	
 	
+
 	
 {% for post  in site.categories.Data-Analysis %}
 <script>
@@ -79,9 +79,7 @@ var myVar= '{{tag[0]|string}}';
 
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
-
-  {% for tag in site.tags %}
-
+{% for tag in site.tags %}
 	  
   {% for post in tag.last %}
 	{% assign checker = false %}
@@ -110,4 +108,3 @@ var myVar= '{{tag[0]|string}}';
       </section>
 
   {% endfor %}
-
