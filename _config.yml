@@ -274,7 +274,7 @@ compress_html:
 comments:
   provider: "disqus"
   disqus:
-    shortname: dev-hundred-blog # Short-name
+    shortname: Rocket-Fund # Short-name
     
 # Defaults
 defaults:
