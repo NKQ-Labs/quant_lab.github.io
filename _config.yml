@@ -274,7 +274,7 @@ compress_html:
 comments:
   provider: "disqus"
   disqus:
-    shortname: Rocket-Fund # Short-name
+    shortname: quant=phd.github.io/ # Short-name
     
 # Defaults
 defaults:
