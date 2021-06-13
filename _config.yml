@@ -274,7 +274,7 @@ compress_html:
 comments:
   provider: "disqus"
   disqus:
-    shortname: "quant-phd.github.io/" # Short-name
+    shortname: "https-quant-phd-github-io" # Short-name
     
 # Defaults
 defaults:
